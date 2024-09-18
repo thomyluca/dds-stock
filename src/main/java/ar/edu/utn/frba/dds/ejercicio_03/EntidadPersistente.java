@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 
 import javax.persistence.*;
 
@@ -16,5 +17,5 @@ public class EntidadPersistente {
     private Long id;
 
     @Column(name = "activo")
-    private boolean activo;
+    private boolean activo = true;
 }

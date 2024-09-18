@@ -9,8 +9,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "tipo_decorado")
-public abstract class Decorado extends EntidadPersistente {
+public abstract class Decorado extends Producto {
 
   @ManyToOne()
   @JoinColumn(name = "producto_id", referencedColumnName = "id")
@@ -19,6 +18,4 @@ public abstract class Decorado extends EntidadPersistente {
   public Double precio() {
     return this.producto.precio();
   }
-
-
 }
